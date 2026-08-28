@@ -119,15 +119,13 @@ body{padding-top:calc(var(--ann-h) + var(--nav-h));}
 .burger span{display:block;width:16px;height:1.5px;background:var(--text);border-radius:2px;transition:transform .3s var(--ease),opacity .3s;}
 
 /* Mobile nav */
-.mob{
-  display:none;flex-direction:column;
+.mob{display:flex;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease);flex-direction:column;
   position:fixed;top:calc(var(--ann-h) + var(--nav-h));left:0;right:0;
   background:var(--bg-2);border-bottom:1px solid var(--border);
   padding:16px 24px 24px;gap:4px;z-index:150;
   transform:translateY(-8px);opacity:0;pointer-events:none;
-  transition:transform .3s var(--ease),opacity .3s;
-}
-.mob.open{transform:none;opacity:1;pointer-events:all;}
+  transition:transform .3s var(--ease),opacity .3s;}
+.mob.open{display:flex;transform:none;opacity:1;pointer-events:all;}
 .mob .nav-link{padding:13px 16px;border-radius:10px;font-size:.9rem;}
 .mob .nav-cta{margin-top:8px;display:block;text-align:center;padding:14px;border-radius:10px;}
 
@@ -455,7 +453,7 @@ footer{border-top:1px solid var(--border);padding:80px 0 40px;}
 
 /* Feature strip */
 .feat-strip{
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
   gap:14px;background:transparent;
   border:none;border-radius:0;
   overflow:visible;margin-top:64px;
@@ -592,7 +590,7 @@ body.loaded .hero-actions{animation:heroin .9s .22s var(--ease) both;}
 }
 @media(max-width:640px){
   .nav-links,.nav-cta{display:none;}
-  .burger{display:flex;}
+  .burger{display:flex;margin-left:auto;}
   .pillars-grid{grid-template-columns:1fr;}
   .hero-h1{font-size:2.8rem;}
   .hero-actions{flex-direction:column;align-items:flex-start;}
@@ -920,3 +918,194 @@ body.no-announce .nav { top: 0; }
 
 /* Kicker removed — section headings adjusted */
 .sec .display, .sec .display-sm { margin-bottom: 18px; }
+
+
+/* ============================================================
+   MOBILE RESPONSIVENESS BLOCK — DO NOT EDIT ABOVE THIS LINE
+   ============================================================ */
+
+/* --- Global: images/media never overflow ------------------- */
+img, video, svg, iframe { max-width: 100%; }
+.hero-sub,
+.prod-desc-hero { max-width: 100%; }
+
+/* --- 768px — Tablet ---------------------------------------- */
+@media(max-width:768px){
+  .wrap,
+  .nav-in { padding:0 24px; }
+
+  /* Headings */
+  .display     { font-size:clamp(1.8rem,5.5vw,2.8rem); }
+  .display-sm  { font-size:clamp(1.5rem,4.5vw,2rem); }
+  .legal-hdr h1{ font-size:clamp(2rem,6vw,3rem) !important; }
+
+  /* Product showcase card — stack at tablet */
+  .ps-grid { grid-template-columns:1fr; }
+  .ps-left  { border-right:none; border-bottom:1px solid var(--border); padding:36px 24px; }
+  .ps-right { min-height:260px; }
+
+  /* Feature strip */
+  .feat-strip  { grid-template-columns:repeat(2,1fr); gap:16px; }
+
+  /* Product hero */
+  .prod-hero-grid { grid-template-columns:1fr; gap:36px; }
+
+  /* About / privacy layout */
+  .about-grid,
+  .priv-layout { grid-template-columns:1fr; gap:36px; }
+
+  /* Value pillars */
+  .pillars-grid { grid-template-columns:repeat(2,1fr); }
+
+  /* Credits */
+  .credits-row { grid-template-columns:repeat(2,1fr); }
+
+  /* Product visual — show on tablet */
+  .prod-visual-wrap { display:flex !important; }
+}
+
+/* --- 640px — Mobile ---------------------------------------- */
+@media(max-width:640px){
+  /* Wrap padding */
+  .wrap,
+  .nav-in { padding:0 20px; }
+
+  /* Hero */
+  .hero       { min-height:100svh; padding:80px 0 56px; }
+  .hero-h1    { font-size:clamp(2rem,8vw,2.8rem); }
+  .hero-sub   { font-size:.95rem; }
+  .hero-actions { flex-direction:column; align-items:stretch; width:100%; gap:10px; }
+  .hero-actions .btn { width:100%; justify-content:center; text-align:center; }
+
+  /* Headings */
+  .display    { font-size:clamp(1.6rem,7vw,2.2rem); }
+  .display-sm { font-size:clamp(1.35rem,5.5vw,1.7rem); }
+  .legal-hdr h1{ font-size:clamp(1.8rem,7vw,2.6rem) !important; }
+
+  /* Sections */
+  .sec        { padding:60px 0; }
+  .legal-hdr  { padding:56px 0 44px; }
+  .cta-sec    { padding:64px 0; }
+
+  /* Product visual — SHOW on mobile (was hidden) */
+  .prod-visual-wrap { display:flex !important; min-height:180px; }
+  .prod-visual-card { padding:12px; }
+  .prod-visual-card img { width:100%; height:auto; object-fit:contain; }
+
+  /* Product showcase card */
+  .ps-wrap    { margin-top:40px; border-radius:16px; }
+  .ps-left    { padding:28px 20px; }
+  .ps-visual  { min-height:220px; }
+  .promo-img  { width:100%; height:auto; display:block; }
+
+  /* Feature strip */
+  .feat-strip { grid-template-columns:1fr; gap:12px; }
+
+  /* Product card action buttons — stack on mobile */
+  .ps-actions { flex-direction:column; align-items:stretch; gap:10px; }
+  .ps-actions .btn { width:100%; justify-content:center; text-align:center; }
+  .feat-item  { padding:20px 16px; }
+
+  /* Credits — single column */
+  .credits-row  { grid-template-columns:1fr; gap:12px; }
+  .cred-cell    { padding:20px 16px; }
+
+  /* Support grid — stack */
+  .supp-grid    { grid-template-columns:1fr !important; gap:12px; }
+  .supp-cell    { padding:20px 16px; }
+
+  /* Pillars */
+  .pillars-grid { grid-template-columns:1fr; }
+  .pillar       { padding:20px 16px; }
+
+  /* Hero pills/badges */
+  .pbadges    { flex-wrap:wrap; gap:8px; }
+  .pbadge     { font-size:.78rem; padding:6px 10px; gap:5px; }
+
+  /* FAQ */
+  .faq-q      { font-size:.88rem; padding:16px; }
+  .faq-stack  { gap:0; }
+
+  /* Install steps */
+  .install-steps { grid-template-columns:1fr !important; gap:16px; }
+  .install-step  { padding:20px 16px; }
+
+  /* Footer */
+  .footer-top { gap:32px; }
+  .footer-brand{ margin-bottom:4px; }
+  .footer-links-col { gap:10px; }
+
+  /* Product grid */
+  .prod-grid  { grid-template-columns:1fr; }
+}
+
+/* --- 480px — Small phones ---------------------------------- */
+@media(max-width:480px){
+  .wrap,
+  .nav-in { padding:0 18px; }
+
+  /* Headings */
+  .hero-h1    { font-size:clamp(1.8rem,8vw,2.4rem); }
+  .display    { font-size:clamp(1.5rem,7.5vw,2rem); }
+  .display-sm { font-size:clamp(1.25rem,6vw,1.6rem); }
+  .legal-hdr h1{ font-size:clamp(1.6rem,8vw,2.2rem) !important; }
+
+  /* Feature items tighter */
+  .feat-item  { padding:16px 14px; }
+  .feat-ico   { width:36px; height:36px; }
+
+  /* Badges */
+  .pbadge     { font-size:.75rem; }
+
+  /* Section padding */
+  .sec        { padding:52px 0; }
+  .legal-hdr  { padding:48px 0 36px; }
+
+  /* Buttons */
+  .btn        { padding:11px 20px; font-size:.88rem; }
+
+  /* FAQ */
+  .faq-q      { font-size:.84rem; padding:14px; }
+}
+
+/* --- 390px — Tiny phones (extend existing rules) ----------- */
+@media(max-width:390px){
+  .wrap,
+  .nav-in { padding:0 16px; }
+
+  .hero-h1    { font-size:1.9rem; }
+  .display    { font-size:1.5rem; }
+  .display-sm { font-size:1.2rem; }
+  .legal-hdr h1{ font-size:1.6rem !important; }
+  .hero-sub   { font-size:.9rem; }
+
+  .feat-strip { gap:10px; }
+  .feat-item  { padding:16px 14px; }
+
+  .ps-left    { padding:24px 16px; }
+
+  .sec        { padding:48px 0; }
+  .legal-hdr  { padding:44px 0 32px; }
+}
+
+/* --- 320px — Minimum supported width ----------------------- */
+@media(max-width:320px){
+  .wrap,
+  .nav-in { padding:0 14px; }
+
+  .hero-h1    { font-size:1.7rem; line-height:1.1; }
+  .display    { font-size:1.4rem; }
+  .display-sm { font-size:1.15rem; }
+  .legal-hdr h1{ font-size:1.5rem !important; }
+
+  .pbadge     { font-size:.72rem; padding:5px 9px; }
+  .btn        { padding:10px 16px; font-size:.85rem; }
+}
+
+/* --- prefers-reduced-motion (extend) ----------------------- */
+@media(prefers-reduced-motion:reduce){
+  .hero-badge-pip,
+  .beam,
+  .cyber-grid { display:none; }
+  * { animation-duration:.01ms !important; transition-duration:.01ms !important; }
+}
