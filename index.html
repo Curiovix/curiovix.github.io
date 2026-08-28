@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Curiovix &mdash; Building Useful Software</title>
+  <meta name="description" content="Curiovix builds practical software and digital products to make everyday life easier. Our first product is StorySplitz, a complete video toolkit for Android."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://curiovix.com/"/>
+  <meta property="og:title" content="Curiovix &mdash; Building Useful Software"/>
+  <meta property="og:description" content="Curiovix builds practical software and digital products to make everyday life easier."/>
+  <meta property="og:image" content="https://curiovix.com/assets/logo/curiovix-logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Curiovix &mdash; Building Useful Software"/>
+  <meta name="twitter:description" content="Building practical software and digital products to make everyday life easier."/>
+  <meta name="theme-color" content="#06060e"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/logo/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/favicon.png"/>
+  <link rel="canonical" href="https://curiovix.com/"/>
+
+  <link rel="stylesheet" href="css/fonts.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="cyber-grid" aria-hidden="true"></div>
+
+<!-- Announce -->
+<div class="announce-bar" role="banner">
+  <span class="announce-dot" aria-hidden="true"></span>
+  StorySplitz is now available for Android &mdash;
+  <a class="announce-link" href="products/storysplitz.html#download">Download free &rarr;</a>
+</div>
+
+<!-- Nav -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Curiovix home">
+      <img src="assets/logo/curiovix-logo.png" alt="Curiovix" height="50" loading="eager"/>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="#products">Products</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="pages/faq.html">FAQ</a>
+      <a class="nav-link" href="pages/privacy.html">Privacy</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob" id="mob" role="navigation" aria-label="Mobile navigation">
+  <a class="nav-link" href="#products">Products</a>
+  <a class="nav-link" href="#about">About</a>
+  <a class="nav-link" href="pages/faq.html">FAQ</a>
+  <a class="nav-link" href="pages/privacy.html">Privacy</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-labelledby="hero-h">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-mouse-glow" id="hero-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1 class="hero-h1" id="hero-h">
+      Software that makes<br><span class="grad-text">life simpler.</span>
+    </h1>
+    <p class="hero-sub">
+      We build practical software and digital products<br>
+      to make everyday life a little easier.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg btn-arr" href="#products">
+        Explore Products
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-lg btn-arr" href="#about">
+        About Curiovix
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY PILLARS -->
+<section class="sec sec-sm sec-border" id="approach" aria-labelledby="approach-h">
+  <div class="wrap">
+    <h2 class="display r d1" id="approach-h">Built with intention.</h2>
+    <div class="pillars-grid">
+
+      <div class="pillar r d1" data-n="01">
+        <div class="pillar-n">01</div>
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </div>
+        <h3>Everyday utility</h3>
+        <p>We build software around real problems. Not solutions looking for a problem.</p>
+      </div>
+
+      <div class="pillar r d2" data-n="02">
+        <div class="pillar-n">02</div>
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Simplicity first</h3>
+        <p>Complex tasks should feel simple. Interfaces should stay out of your way.</p>
+      </div>
+
+      <div class="pillar r d3" data-n="03">
+        <div class="pillar-n">03</div>
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Privacy by default</h3>
+        <p>Products should respect the people using them. Your data stays yours.</p>
+      </div>
+
+      <div class="pillar r d4" data-n="04">
+        <div class="pillar-n">04</div>
+        <div class="pillar-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Craft matters</h3>
+        <p>We care about details. Every interaction, every edge case, every pixel.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="sec sec-border" id="products" aria-labelledby="products-h">
+  <div class="wrap">
+    <div class="section-hdr">
+      <div>
+        <h2 class="display r d1" id="products-h">Our products.</h2>
+        <p class="r d2" style="margin-top:14px;max-width:480px;font-size:.9rem;color:var(--muted);line-height:1.78;">Each product we build solves a specific problem. No bloat, no dark patterns &mdash; just tools that work.</p>
+      </div>
+    </div>
+
+    <!-- StorySplitz featured showcase -->
+    <div class="ps-wrap spotlight-host r d2">
+      <div class="ps-grid">
+        <div class="ps-left">
+          <div class="ps-app-row">
+            <img class="ps-app-icon" src="assets/logo/storysplitz-logo.png" alt="StorySplitz icon"/>
+            <div>
+              <div class="ps-app-name">StorySplitz</div>
+              <span class="badge-live">Available for Android</span>
+            </div>
+          </div>
+          <p class="ps-desc">A complete video toolkit for Android. Split, compress, convert and edit &mdash; processed entirely on your device. No cloud. No account. No subscription.</p>
+          <div class="ps-feats">
+            <div class="ps-feat"><span class="ps-feat-dot"></span>Split videos for Instagram, WhatsApp and TikTok stories</div>
+            <div class="ps-feat"><span class="ps-feat-dot"></span>Compress, trim, merge and convert video files</div>
+            <div class="ps-feat"><span class="ps-feat-dot"></span>100% on-device processing with FFmpeg &mdash; works offline</div>
+            <div class="ps-feat"><span class="ps-feat-dot"></span>No account required. Your videos stay on your device.</div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn btn-primary btn-md btn-arr" href="products/storysplitz.html">
+              Explore StorySplitz
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost btn-md" href="products/storysplitz.html#download">Download APK</a>
+          </div>
+        </div>
+        <div class="ps-right" aria-hidden="true">
+          <div class="ps-visual">
+        <div class="promo-img-wrap" id="promo-tilt-home">
+          <img src="assets/logo/storysplitz-promo.png"
+               alt="StorySplitz — Social Media Ready Clips"
+               class="promo-img"
+               loading="lazy"/>
+          <div class="promo-glow"></div>
+        </div>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec-border" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <h2 class="display r d1" id="about-h">Building what<br>actually matters.</h2>
+        <p class="r d2" style="font-size:.95rem;color:var(--muted);line-height:1.82;margin-top:20px;max-width:440px;">Curiovix is an independent software company focused on building practical, privacy-respecting digital products. We don&rsquo;t build for hype &mdash; we build tools people genuinely need.</p>
+        <p class="r d3" style="font-size:.95rem;color:var(--muted);line-height:1.82;margin-top:14px;max-width:440px;">Every product we ship has a clear purpose, honest monetisation, and transparent privacy practices.</p>
+        <div class="values r d4">
+          <div class="value">
+            <span class="value-n" aria-hidden="true">01</span>
+            <div><h4>Privacy by Default</h4><p>We design products so your data stays on your device wherever possible.</p></div>
+          </div>
+          <div class="value">
+            <span class="value-n" aria-hidden="true">02</span>
+            <div><h4>Useful over Impressive</h4><p>We build tools that solve real everyday problems &mdash; not feature showcases.</p></div>
+          </div>
+          <div class="value">
+            <span class="value-n" aria-hidden="true">03</span>
+            <div><h4>Radical Transparency</h4><p>Honest about how our products work, what data is collected, and how ads are used.</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="metric-stack r d2">
+          <div class="metric"><span class="metric-label">Video tools in StorySplitz</span><span class="metric-val" data-count="12" data-suffix="+">12+</span></div>
+          <div class="metric"><span class="metric-label">On-device processing</span><span class="metric-val" data-count="100" data-suffix="%">100%</span></div>
+          <div class="metric"><span class="metric-label">Video uploads to our servers</span><span class="metric-val">Zero</span></div>
+          <div class="metric"><span class="metric-label">Account required</span><span class="metric-val">None</span></div>
+          <div class="metric"><span class="metric-label">Starter credits, free on install</span><span class="metric-val" data-count="30">30</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="cta-sec sec-border" aria-label="Call to action">
+  <div class="wrap">
+    
+    <h2 class="display r d1" style="margin-bottom:18px;">More products<br>are on the way.</h2>
+    <p class="r d2" style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto;">We are an independent company taking our time to build each product properly. StorySplitz is the first. More are coming.</p>
+    <div class="r d3" style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
+      <a class="btn btn-primary btn-lg btn-arr" href="products/storysplitz.html">
+        Try StorySplitz
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a class="btn btn-ghost btn-lg" href="mailto:curiovix.support@gmail.com">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html" aria-label="Curiovix home">
+          <img src="assets/logo/curiovix-logo.png" alt="Curiovix" height="42" loading="lazy"/>
+        </a>
+        <p>Building useful, privacy-focused software and digital products to make everyday life easier.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="products/storysplitz.html">StorySplitz</a></li>
+          <li><a href="products/storysplitz.html#features">Features</a></li>
+          <li><a href="products/storysplitz.html#download">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="pages/faq.html">FAQ</a></li>
+          <li><a href="mailto:curiovix.support@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="pages/privacy.html">Privacy Policy</a></li>
+          <li><a href="pages/terms.html">Terms of Use</a></li>
+          <li><a href="pages/faq.html#install">Install Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="year">2026</span> Curiovix. All rights reserved.</span>
+      <span>
+        <a href="pages/privacy.html">Privacy</a> &middot;
+        <a href="pages/terms.html">Terms</a> &middot;
+        <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="config/site.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scene.js"></script>
+</body>
+</html>
