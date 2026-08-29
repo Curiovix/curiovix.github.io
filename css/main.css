@@ -925,6 +925,10 @@ body.no-announce .nav { top: 0; }
    ============================================================ */
 
 /* --- Global: images/media never overflow ------------------- */
+/* Announcement bar responsive text */
+.ann-short { display:none; }
+.ann-full  { display:inline; }
+
 img, video, svg, iframe { max-width: 100%; }
 .hero-sub,
 .prod-desc-hero { max-width: 100%; }
@@ -1037,6 +1041,12 @@ img, video, svg, iframe { max-width: 100%; }
 
   /* Product grid */
   .prod-grid  { grid-template-columns:1fr; }
+
+  /* Announcement bar — prevent overflow */
+  .announce-bar { font-size:.72rem; padding:0 12px; gap:6px; }
+  .announce-dot { display:none; }
+  .ann-full { display:none; }
+  .ann-short { display:inline; }
 }
 
 /* --- 480px — Small phones ---------------------------------- */
@@ -1066,6 +1076,9 @@ img, video, svg, iframe { max-width: 100%; }
 
   /* FAQ */
   .faq-q      { font-size:.84rem; padding:14px; }
+
+  /* Announcement bar — even smaller screens */
+  .announce-bar { font-size:.68rem; padding:0 10px; gap:4px; white-space:nowrap; overflow:hidden; }
 }
 
 /* --- 390px — Tiny phones (extend existing rules) ----------- */
