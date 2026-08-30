@@ -1,6 +1,6 @@
-'use strict';
+﻿'use strict';
 
-// Body loaded → trigger hero entrance animation
+// Body loaded â†’ trigger hero entrance animation
 window.addEventListener('load', () => document.body.classList.add('loaded'));
 
 // Nav scroll state
@@ -43,6 +43,12 @@ if (glow) {
       tx = e.clientX - rect.left;
       ty = e.clientY - rect.top;
     });
+    hero.addEventListener('touchmove', e => {
+      const rect = hero.getBoundingClientRect();
+      const touch = e.touches[0];
+      tx = touch.clientX - rect.left;
+      ty = touch.clientY - rect.top;
+    }, { passive: true });
     (function animate() {
       cx += (tx - cx) * 0.07;
       cy += (ty - cy) * 0.07;
@@ -151,3 +157,4 @@ document.querySelectorAll('.spotlight-host').forEach(el => {
     initTilt();
   }
 })();
+

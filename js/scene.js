@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 (function () {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
@@ -58,6 +58,11 @@
     tx = (e.clientX / innerWidth  - .5) * 2;
     ty = (e.clientY / innerHeight - .5) * 2;
   });
+  document.addEventListener('touchmove', e => {
+    const touch = e.touches[0];
+    tx = (touch.clientX / innerWidth  - .5) * 2;
+    ty = (touch.clientY / innerHeight - .5) * 2;
+  }, { passive: true });
 
   /* Resize */
   window.addEventListener('resize', () => {
@@ -78,3 +83,4 @@
     renderer.render(scene, camera);
   })();
 })();
+
