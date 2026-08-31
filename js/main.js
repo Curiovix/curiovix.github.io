@@ -43,12 +43,6 @@ if (glow) {
       tx = e.clientX - rect.left;
       ty = e.clientY - rect.top;
     });
-    hero.addEventListener('touchmove', e => {
-      const rect = hero.getBoundingClientRect();
-      const touch = e.touches[0];
-      tx = touch.clientX - rect.left;
-      ty = touch.clientY - rect.top;
-    }, { passive: true });
     (function animate() {
       cx += (tx - cx) * 0.07;
       cy += (ty - cy) * 0.07;
