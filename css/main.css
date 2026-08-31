@@ -635,19 +635,29 @@ body { background: var(--bg); }
 
 /* Three.js canvas â€“ fixed behind everything */
 #bg-canvas {
-  position:fixed; inset:0; z-index:0;
+  position:fixed; top:0; left:0; width:100% !important; height:100svh !important; z-index:0;
   pointer-events:none; width:100% !important; height:100% !important;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 
 /* Cyber grid overlay */
 .cyber-grid {
-  position:fixed; inset:0; z-index:1; pointer-events:none;
+  position:fixed; top:0; left:0; width:100%; height:100svh; z-index:1; pointer-events:none;
   background-image:
     linear-gradient(rgba(99,102,241,.065) 1px, transparent 1px),
     linear-gradient(90deg, rgba(99,102,241,.065) 1px, transparent 1px);
   background-size:64px 64px;
   mask-image:radial-gradient(ellipse 100% 100% at 50% 0%, black 40%, transparent 100%);
   -webkit-mask-image:radial-gradient(ellipse 100% 100% at 50% 0%, black 40%, transparent 100%);
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 
 /* All page content sits above canvas + grid */
@@ -860,8 +870,20 @@ footer {
 
 /* â”€â”€ Reduced motion safety â”€â”€ */
 @media(prefers-reduced-motion:reduce){
-  #bg-canvas { display:none; }
-  .cyber-grid { display:none; }
+  #bg-canvas { display:none;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+  .cyber-grid { display:none;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
 }
 
 /* Pages without announce bar â€” reset padding and nav position */
@@ -1119,13 +1141,31 @@ img, video, svg, iframe { max-width: 100%; }
 @media(prefers-reduced-motion:reduce){
   .hero-badge-pip,
   .beam,
-  .cyber-grid { display:none; }
+  .cyber-grid { display:none;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
   * { animation-duration:.01ms !important; transition-duration:.01ms !important; }
 }
 
 
 /* -- Hide Three.js canvas on mobile -- prevents address-bar resize shake */
 @media(max-width:767px){
-  #bg-canvas { display:none !important; }
-  .cyber-grid { display:none !important; }
+  #bg-canvas { display:none !important;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+  .cyber-grid { display:none !important;
+  will-change:transform;
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
 }
