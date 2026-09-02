@@ -12,8 +12,9 @@
   renderer.setSize(W, H);
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 
-  /* Particles */
-  const COUNT = 220;
+  /* Mobile: dots only — no lines, fewer particles */
+  const isMobile = innerWidth < 768;
+  const COUNT = isMobile ? 80 : 220;
   const pos   = new Float32Array(COUNT * 3);
   const col   = new Float32Array(COUNT * 3);
   const palette = [
@@ -50,7 +51,7 @@
     }
   }
   lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
-  scene.add(new THREE.LineSegments(lineGeo, lineMat));
+  if (!isMobile) scene.add(new THREE.LineSegments(lineGeo, lineMat));
 
   /* Mouse parallax */
   let mx = 0, my = 0, tx = 0, ty = 0;
