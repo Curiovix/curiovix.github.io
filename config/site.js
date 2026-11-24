@@ -10,10 +10,13 @@ const SITE_CONFIG = {
 
   // Product #1: Melodiq (Flagship Audio Player)
   MELODIQ_NAME:         "Melodiq",
-  MELODIQ_TAGLINE:      "Smart music player and regional audio streaming for Android.",
-  MELODIQ_STATUS:       "Available for Android",
+  MELODIQ_TAGLINE:      "Modern Android music player and regional audio discovery companion.",
+  MELODIQ_STATUS:       "Coming Soon on Google Play",
   MELODIQ_VERSION:      "1.0.0",
-  MELODIQ_MIN_ANDROID:  "Android 7.0+",
+  MELODIQ_MIN_ANDROID:  "Android 5.0 (API 21)+",
+  MELODIQ_TARGET_SDK:   "Target SDK 36",
+  MELODIQ_LIVE:         false,               // Switch to true once Google Play listing is live
+  MELODIQ_PLAY_STORE_URL: "https://google.com", // Google Play Store listing URL
 
   // Product #2: StorySplitz (Video Toolkit - Coming Soon)
   APP_NAME:             "StorySplitz",
@@ -21,10 +24,10 @@ const SITE_CONFIG = {
   APP_STATUS:           "Coming Soon",
   APP_VERSION:          "1.0.0",
   APP_MIN_ANDROID:      "Android 5.0 (API 21)+",
-  DOWNLOAD_READY:       true,               // set to true and fill APK_URL before release
-  APK_URL:              "https://github.com/Curiovix/StorySplitz/releases/download/v1.0.0/StorySplitz-v1.0.0.apk",                  // fill with direct APK download URL
+  DOWNLOAD_READY:       false,              // StorySplitz is currently in development / Coming Soon
+  APK_URL:              "https://github.com/Curiovix/StorySplitz/releases/download/v1.0.0/StorySplitz-v1.0.0.apk",
   APK_SIZE:             "68 MB",
-  RELEASE_DATE:         "August 2026",
+  RELEASE_DATE:         "Coming Soon",
   STARTER_CREDITS:      30,
   REWARDED_CREDITS:     20,
   BATCH_SPLIT_COST:     8,

@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Privacy Policy &mdash; Melodiq | Curiovix</title>
-  <meta name="description" content="Privacy Policy for Melodiq by Curiovix. Learn how Melodiq protects your privacy with 100% on-device Hive storage, zero user accounts, and transparent ad practices."/>
+  <meta name="description" content="Privacy Policy for Melodiq by Curiovix. Learn how Melodiq protects your privacy with local-first Hive storage, zero user accounts, and transparent ad practices."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://curiovix.com/pages/melodiq-privacy.html"/>
   <meta property="og:title" content="Privacy Policy &mdash; Melodiq | Curiovix"/>
@@ -39,7 +39,7 @@
       <a class="nav-link" href="faq.html">FAQ</a>
       <a class="nav-link" href="melodiq-privacy.html">Privacy</a>
     </div>
-    <a class="nav-cta" href="../products/melodiq.html#download">Get Melodiq</a>
+    <a class="nav-cta" href="../products/melodiq.html#download">Get the App</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -50,7 +50,7 @@
   <a class="nav-link" href="faq.html">FAQ</a>
   <a class="nav-link" href="melodiq-privacy.html">Privacy Policy</a>
   <a class="nav-link" href="melodiq-terms.html">Terms of Use</a>
-  <a class="nav-cta" href="../products/melodiq.html#download">Get Melodiq</a>
+  <a class="nav-cta" href="../products/melodiq.html#download">Get the App</a>
 </div>
 
 <div class="legal-hdr">
@@ -61,88 +61,39 @@
 </div>
 
 <div class="legal-body">
-  <span class="legal-date">Last updated: November 2026</span>
+  <span class="legal-date">Effective Date: November 2026</span>
   <div class="legal-note">
-    <strong>Summary:</strong> Melodiq is built from the ground up to respect your privacy. All your listening preferences, taste profiles, history, playlists, and favorites are stored 100% locally on your Android device using Hive. We do not require accounts, logins, or passwords, and we never upload your personal audio files or listening data to our servers.
+    <strong>About Melodiq (v1.0.0, Developer: Curiovix, Contact: curiovix.support@gmail.com):</strong> Modern, lightweight Android music player and audio discovery companion featuring on-device taste personalization, regional music discovery, real-time synced lyrics, sleep timer with smooth volume fade-out, offline local audio playback, and hands-free voice search.
   </div>
 
-  <h2>1. Who We Are</h2>
-  <p>Melodiq is developed and distributed by Curiovix ("we", "us", or "our"). This Privacy Policy explains our commitment to transparency and describes how the Melodiq application ("App") handles information when you use it on your Android device.</p>
-  <p>Official Contact: <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a></p>
+  <h2>1. Local-First Architecture (No User Accounts)</h2>
+  <p>Melodiq requires no user registration, login, password, or cloud profile. Favorites, custom playlists, listening history, and taste profiles are stored strictly on-device in sandboxed local Hive storage (<code>allowBackup="false"</code>). Curiovix operates no backend servers collecting user accounts or personal listening databases.</p>
 
-  <h2>2. Information We Do NOT Collect</h2>
-  <ul>
-    <li><strong>No User Accounts:</strong> We do not require you to register, log in, or provide usernames, passwords, phone numbers, or email addresses.</li>
-    <li><strong>No Personal Identity Profiles:</strong> We do not collect or track personal identities or associate listening activity with individuals.</li>
-    <li><strong>No Server-Side Audio or Listening Uploads:</strong> Your listening history, playlists, favorites, and local audio files are never uploaded to, hosted on, or processed by Curiovix servers.</li>
-    <li><strong>No Sale of Data:</strong> We never sell, rent, monetize, or trade any user data to third parties.</li>
-  </ul>
+  <h2>2. Advertising &amp; Google UMP Consent</h2>
+  <p>Melodiq integrates Google AdMob (<code>google_mobile_ads</code>) to display App Open ads and muted Now-Playing Native ads. AdMob may collect device identifiers (such as the Android Advertising ID), IP address, and ad interaction diagnostics for ad delivery, frequency capping, and fraud prevention. For users in the EEA, UK, and Switzerland, Melodiq uses Google's User Messaging Platform (UMP) SDK in fail-closed mode to obtain consent before loading ads. Users can reset or opt out of personalized advertising anytime via Android Settings &rarr; Privacy &rarr; Ads or the in-app Manage Ad Consent option.</p>
 
-  <h2>3. 100% Local On-Device Hive Storage</h2>
-  <p>Melodiq utilizes lightweight, on-device Hive storage boxes exclusively located in your device's private app sandbox. This includes:</p>
-  <ul>
-    <li><strong>Taste Personalization:</strong> The App analyzes your listening patterns, preferred genres, and most-played tracks locally to power on-device recommendations and personalized feeds. This algorithm operates entirely on your device.</li>
-    <li><strong>Favorites &amp; Playlists:</strong> Tracks you favorite or organize into playlists are saved strictly in your local Hive storage.</li>
-    <li><strong>Playback Preferences:</strong> Settings such as sleep timer durations, audio quality selections, and theme preferences remain strictly on-device.</li>
-  </ul>
-  <p>Because this data resides solely on your Android device, Curiovix has zero access to your taste profile or listening records.</p>
+  <h2>3. Encrypted Regional Language Lookup (ipwho.is)</h2>
+  <p>When "Auto" language mode is selected on <code>en_IN</code> devices, Melodiq performs a periodic encrypted HTTPS region lookup via <code>ipwho.is</code> (cached locally on-device with a 2-hour TTL) solely to tailor regional music defaults (e.g., Telugu in Andhra Pradesh/Telangana). As part of any standard HTTPS network request, the external regional lookup provider (<code>ipwho.is</code>) receives the device's IP address to resolve approximate region/state; Curiovix does not collect, log, or retain IP addresses on any server. Devices with explicit system locales resolve language 100% locally with zero network requests.</p>
 
-  <h2>4. Advertising &amp; Google AdMob Compliance</h2>
-  <p>Melodiq is a free application supported by advertising through Google AdMob (using the official <code>google_mobile_ads</code> SDK).</p>
-  <ul>
-    <li><strong>Google UMP Consent:</strong> Melodiq incorporates the Google User Messaging Platform (UMP) SDK to comply with international privacy standards (including the European General Data Protection Regulation &mdash; GDPR &mdash; and UK data protection frameworks). Where applicable, users receive standard consent dialogs to review and configure their advertising preferences.</li>
-    <li><strong>Advertising Identifiers:</strong> Third-party ad networks (Google and its certified partners) may process standard mobile advertising identifiers (e.g., Android Advertising ID) and non-identifiable technical diagnostics to deliver contextual advertisements.</li>
-    <li><strong>Muted Native Ads:</strong> Any native advertisements displayed on the Now-Playing screen are strictly muted by default to preserve an uninterrupted listening environment.</li>
-  </ul>
-  <p>For detailed information on how Google processes ad data, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Technologies</a>.</p>
+  <h2>4. Public Lyrics &amp; Search Metadata Requests (LrcLib &amp; Stream Discovery)</h2>
+  <p>Individual search queries, track metadata, and synced lyrics requests (LrcLib) are transmitted over encrypted HTTPS (<code>usesCleartextTraffic="false"</code>) to fetch requested audio streams, cover artwork, and lyrics. These individual requests are ephemeral and are not tied to any user identity or account.</p>
 
-  <h2>5. Regional Language Discovery (ipwho.is)</h2>
-  <p>To deliver relevant regional music discovery and configure sensible regional language defaults for users on Indian English (<code>en_IN</code>) devices, Melodiq makes a periodic, encrypted HTTPS query to the IP lookup service <code>ipwho.is</code>.</p>
-  <ul>
-    <li><strong>Local 2-Hour TTL Caching:</strong> The regional lookup response is stored strictly in your local device cache with a 2-hour time-to-live (TTL). The App will not make additional lookup requests while the cache remains valid.</li>
-    <li><strong>No Personal Information:</strong> No names, account data, or user profiles are sent with this lookup. Curiovix does not log, track, or retain user IP addresses on any server.</li>
-  </ul>
+  <h2>5. Device Permissions (READ_MEDIA_AUDIO &amp; Optional RECORD_AUDIO)</h2>
+  <p>Storage/media audio permission (<code>READ_MEDIA_AUDIO</code> on Android 13+ / <code>READ_EXTERNAL_STORAGE</code> on Android 12 and below) is used solely to scan and play audio files already stored locally on the user's device. Optional microphone permission (<code>RECORD_AUDIO</code>) is requested only when the user taps the voice search button and uses Android's system speech-recognition service (which may process voice audio via Google or device speech services depending on the user's Android speech settings) to convert speech into a search query; Curiovix never records, stores, or uploads voice audio.</p>
 
-  <h2>6. Public Synced Lyrics &amp; Metadata Requests (LrcLib)</h2>
-  <p>When playing tracks, Melodiq can retrieve synchronized and plain-text lyrics from public lyric repositories, specifically LrcLib, via encrypted HTTPS.</p>
-  <ul>
-    <li>These requests transmit only public metadata &mdash; namely the track title and artist name &mdash; necessary to look up matching lyrics.</li>
-    <li>No user identifiers, device credentials, or listening histories are attached to lyric queries.</li>
-  </ul>
+  <h2>6. Data Retention &amp; User Deletion Rights</h2>
+  <p>Because all user preferences and history reside locally on-device, users can permanently delete all stored app data at any time via Android Settings &rarr; Apps &rarr; Melodiq &rarr; Storage &rarr; Clear Data, or by uninstalling the app. Contact <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a> for any privacy inquiries.</p>
 
-  <h2>7. Device Permissions Disclosed</h2>
-  <p>Melodiq requests only permissions strictly necessary to provide media playback and user-initiated features:</p>
-  <ul>
-    <li><strong>READ_MEDIA_AUDIO (or READ_EXTERNAL_STORAGE):</strong> Allows the App to scan, index, and play audio files stored on your local device storage. Your files remain on your phone; they are never uploaded to any server.</li>
-    <li><strong>RECORD_AUDIO (Optional Microphone Access):</strong> Used exclusively when you tap the voice search button to search for songs hands-free. Audio is processed into text via standard Android speech recognition; voice recordings are never saved, recorded in the background, or transmitted to Curiovix.</li>
-    <li><strong>INTERNET &amp; ACCESS_NETWORK_STATE:</strong> Required to stream online audio streams, fetch public lyrics, check cached regional discovery defaults, and load AdMob advertisements.</li>
-    <li><strong>FOREGROUND_SERVICE &amp; POST_NOTIFICATIONS:</strong> Required by Android to keep audio playing smoothly when the app is in the background or the screen is locked, and to display notification playback controls.</li>
-  </ul>
-
-  <h2>8. User Data Deletion &amp; Storage Controls</h2>
-  <p>Because all personal preferences and playlists are stored locally on your device in Hive, you maintain complete sovereignty over your data at all times:</p>
-  <ul>
-    <li><strong>Instant Data Deletion:</strong> You can completely and irreversibly erase all local Hive databases, history, cached lyrics, and settings at any time by opening your phone's <strong>Settings &rarr; Apps &rarr; Melodiq &rarr; Storage &rarr; Tap &ldquo;Clear Data&rdquo; and &ldquo;Clear Cache&rdquo;</strong>.</li>
-    <li><strong>App Uninstallation:</strong> Uninstalling Melodiq permanently deletes all application storage, local databases, and temporary cache files from your device.</li>
-    <li><strong>Assistance:</strong> For questions or data management guidance, you can always contact us at <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a>.</li>
-  </ul>
-
-  <h2>9. Children&rsquo;s Privacy</h2>
-  <p>Melodiq is not directed to children under 13 years of age. We do not knowingly collect, solicit, or maintain personal information from children.</p>
-
-  <h2>10. Third-Party Services &amp; Links</h2>
-  <p>Melodiq interacts with trusted third-party providers under their respective privacy policies:</p>
+  <h2>7. Third-Party Services &amp; Privacy Policies</h2>
+  <p>External services integrated into or accessed by Melodiq operate under their respective privacy policies:</p>
   <ul>
     <li>Google AdMob &amp; Google UMP &mdash; <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
     <li>LrcLib (Public Lyrics Provider) &mdash; <a href="https://lrclib.net" target="_blank" rel="noopener">LrcLib Website</a></li>
     <li>ipwho.is (Regional Lookup API) &mdash; <a href="https://ipwho.is" target="_blank" rel="noopener">ipwho.is Privacy</a></li>
   </ul>
 
-  <h2>11. Changes to This Privacy Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Any revisions will be published immediately on this page with an updated &ldquo;Last updated&rdquo; timestamp.</p>
-
-  <h2>12. Contact Information</h2>
-  <p>If you have any questions, concerns, or requests regarding this Privacy Policy or Melodiq&rsquo;s privacy practices, please contact our official support team at:</p>
+  <h2>8. Contact Information</h2>
+  <p>For any questions, requests, or privacy inquiries regarding Melodiq, contact Curiovix directly:</p>
   <p>Email: <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a></p>
 </div>
 

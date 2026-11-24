@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 // Body loaded â†’ trigger hero entrance animation
 window.addEventListener('load', () => document.body.classList.add('loaded'));
@@ -113,6 +113,26 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     if (dlBtn)    dlBtn.style.display = 'none';
     if (dlComing) dlComing.style.display = 'inline-flex';
+  }
+
+  // Melodiq Google Play CTA toggle
+  const melodiqLiveBtns = document.querySelectorAll('.melodiq-play-btn');
+  const melodiqComingBtns = document.querySelectorAll('.melodiq-play-coming');
+  if (SITE.MELODIQ_LIVE && SITE.MELODIQ_PLAY_STORE_URL) {
+    melodiqLiveBtns.forEach(el => {
+      el.href = SITE.MELODIQ_PLAY_STORE_URL;
+      el.style.display = 'inline-flex';
+    });
+    melodiqComingBtns.forEach(el => {
+      el.style.display = 'none';
+    });
+  } else {
+    melodiqLiveBtns.forEach(el => {
+      el.style.display = 'none';
+    });
+    melodiqComingBtns.forEach(el => {
+      el.style.display = 'inline-flex';
+    });
   }
 });
 
