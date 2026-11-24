@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Melodiq &mdash; Smart Music Player for Android | Curiovix</title>
+  <meta name="description" content="Melodiq is an intuitive music player for Android featuring on-device taste personalization, regional discovery, synchronized lyrics, sleep timer, and offline local audio playback. No account required."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://curiovix.com/products/melodiq.html"/>
+  <meta property="og:title" content="Melodiq &mdash; Smart Music Player for Android | Curiovix"/>
+  <meta property="og:description" content="Smart music streaming and offline audio player for Android. On-device taste personalization, synced lyrics, and regional discovery with no account required."/>
+  <meta property="og:image" content="https://curiovix.com/assets/logo/melodiq-logo.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Melodiq by Curiovix"/>
+  <meta name="twitter:description" content="Smart music streaming and offline audio player for Android with on-device personalization, synced lyrics, and zero account requirements."/>
+  <meta name="theme-color" content="#06060e"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="../assets/logo/favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/favicon.png"/>
+  <link rel="canonical" href="https://curiovix.com/products/melodiq.html"/>
+
+  <link rel="preload" href="../assets/fonts/HTxqL289NzCGg4MzN6KJ7eW6CYyF_g.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="../css/fonts.css"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body class="no-announce">
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="cyber-grid" aria-hidden="true"></div>
+
+<!-- Nav -->
+<nav class="nav" id="nav" role="navigation" aria-label="Product navigation">
+  <div class="nav-in">
+    <a class="nav-logo" href="../index.html" aria-label="Curiovix home">
+      <img src="../assets/logo/curiovix-logo.png" alt="Curiovix" height="50" loading="eager"/>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#privacy">Privacy</a>
+      <a class="nav-link" href="#download">Download</a>
+      <a class="nav-link" href="../pages/melodiq-privacy.html">Privacy Policy</a>
+    </div>
+    <a class="nav-cta" href="#download">Get Melodiq</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob" id="mob" role="navigation" aria-label="Mobile navigation">
+  <a class="nav-link" href="../index.html">&larr; Curiovix</a>
+  <a class="nav-link" href="#features">Features</a>
+  <a class="nav-link" href="#privacy">Privacy</a>
+  <a class="nav-link" href="../pages/melodiq-privacy.html">Privacy Policy</a>
+  <a class="nav-link" href="../pages/melodiq-terms.html">Terms &amp; Conditions</a>
+  <a class="nav-cta" href="#download">Get Melodiq</a>
+</div>
+
+<!-- HERO -->
+<section class="prod-hero" id="home" aria-labelledby="prod-h">
+  <div class="prod-hero-bg" aria-hidden="true">
+    <div class="prod-orb-1"></div>
+    <div class="prod-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:2;width:100%;">
+    <div class="prod-hero-grid">
+      <div>
+        <a class="back" href="../index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to Curiovix
+        </a>
+        <img class="prod-icon r" src="../assets/logo/melodiq-logo.png" alt="Melodiq app icon"/>
+        <h1 class="prod-name r d1" id="prod-h">Melodiq</h1>
+        <p class="prod-desc-hero r d2">Smart music player and regional audio streaming for Android. Discover regional music, follow along with real-time synchronized lyrics, play your local audio library, and personalize your sound &mdash; all with zero accounts and privacy-first local storage.</p>
+        <div class="prod-badges r d3">
+          <span class="pbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>Android 7.0+</span>
+          <span class="pbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy-first Hive</span>
+          <span class="pbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Synced Lyrics</span>
+          <span class="pbadge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Offline Local Audio</span>
+        </div>
+        <div class="prod-actions r d4">
+          <a class="btn btn-primary btn-lg btn-arr" href="#download">
+            Get Melodiq
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#features">Explore Features</a>
+        </div>
+      </div>
+      <div class="prod-visual-wrap r d3" aria-hidden="true">
+        <div class="prod-visual-card spotlight-host">
+          <div class="pvc-header">
+            <img class="pvc-icon" src="../assets/logo/melodiq-logo.png" alt=""/>
+            <div>
+              <div class="pvc-title">Melodiq</div>
+              <div class="pvc-sub">On-Device Audio Player</div>
+            </div>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Taste Personalization</span>
+            <div style="display:flex;align-items:center;gap:6px;"><div class="pvc-dot"></div><span class="pvc-val" style="color:var(--green);">100% Local Hive</span></div>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Synced Lyrics</span>
+            <span class="pvc-val">Real-time display</span>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Regional Discovery</span>
+            <span class="pvc-val">Smart language defaults</span>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Account Required</span>
+            <span class="pvc-val">None (Instant access)</span>
+          </div>
+          <div class="pvc-row">
+            <span class="pvc-label">Cloud Audio Uploads</span>
+            <span class="pvc-val">Zero</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec sec-border" id="features" aria-labelledby="feat-h">
+  <div class="wrap">
+    <h2 class="display-sm r d1" id="feat-h">Designed for music lovers.<br>Built with respect for privacy.</h2>
+    <div class="feat-strip spotlight-host r d2">
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>On-Device Taste Personalization</h4>
+        <p>Melodiq learns your music taste, favorite genres, and frequent tracks entirely on your device using local Hive storage. Zero listening data is uploaded to cloud profiles.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h4>Regional Music Discovery</h4>
+        <p>Explore curated regional music trends and playlists effortlessly. Features automated language defaults on en_IN devices backed by periodic, encrypted HTTPS region lookups.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h4>Real-Time Synced Lyrics</h4>
+        <p>Follow along word-for-word with rich, synchronized lyrics display retrieved via public lyrics requests (LrcLib), keeping you immersed in the emotional flow of every song.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>Built-In Sleep Timer</h4>
+        <p>Set a gentle bedtime countdown to pause audio automatically when you fall asleep. Conserve device battery life and prevent unexpected background data use overnight.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h4>Offline Local Audio Playback</h4>
+        <p>Seamlessly scan and enjoy your device's local audio files with full offline playback support. Your private audio files stay strictly on your Android device.</p>
+      </div>
+      <div class="feat-item">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <h4>Hands-Free Voice Search</h4>
+        <p>Find songs, artists, and albums instantly with optional microphone voice search. Fast, convenient query processing without saving audio recordings to any server.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="sec sec-border" id="privacy" aria-labelledby="priv-h">
+  <div class="wrap">
+    <div class="priv-layout">
+      <div>
+        <h2 class="display-sm r d1" id="priv-h">Your listening habits<br>stay on your device.</h2>
+        <p class="r d2" style="font-size:.95rem;color:var(--muted);line-height:1.82;margin-top:20px;max-width:400px;">Melodiq stores your listening history, favorites, custom playlists, and taste profiles locally on your device in lightweight Hive boxes. We never require user accounts, passwords, or personal credentials.</p>
+        <p class="r d3" style="font-size:.95rem;color:var(--muted);line-height:1.82;margin-top:14px;max-width:400px;">Ad-supported via Google AdMob with Google UMP consent compliance. Offline local playback requires no internet connection.</p>
+        <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;">
+          <a class="btn btn-ghost btn-md r d4" href="../pages/melodiq-privacy.html">
+            Read Privacy Policy &rarr;
+          </a>
+          <a class="btn btn-ghost btn-md r d4" href="../pages/melodiq-terms.html">
+            Terms of Use &rarr;
+          </a>
+        </div>
+      </div>
+      <div class="priv-items r d2">
+        <div class="priv-item spotlight-host">
+          <div class="priv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h4>100% Local Hive Storage</h4><p>Your listening history, favorites, and playlists are saved strictly in your device's local Hive database. Never uploaded to cloud profiles.</p></div>
+        </div>
+        <div class="priv-item spotlight-host">
+          <div class="priv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg></div>
+          <div><h4>Zero User Accounts</h4><p>No registration, no passwords, and no cloud sync. Open the app and start streaming or playing local files immediately.</p></div>
+        </div>
+        <div class="priv-item spotlight-host">
+          <div class="priv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div><h4>Offline Media Playback</h4><p>Plays your on-device audio files without needing an active internet connection. Your local music library stays under your control.</p></div>
+        </div>
+        <div class="priv-item spotlight-host">
+          <div class="priv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><polyline points="9 11 11 13 15 9"/></svg></div>
+          <div><h4>Transparent Disclosures</h4><p>Google AdMob advertising identifiers managed with Google UMP consent standards, and public metadata integration.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="sec sec-border" id="download" aria-labelledby="dl-h" style="text-align:center;">
+  <div class="wrap">
+    <h2 class="display-sm r d1" id="dl-h" style="margin-bottom:48px;">Get Melodiq.</h2>
+    <div class="dl-wrap">
+      <img class="dl-icon r" src="../assets/logo/melodiq-logo.png" alt="Melodiq"/>
+      <div class="dl-meta r d1">
+        <div class="dl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Version <strong>1.0.0</strong></div>
+        <div class="dl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>Android 7.0+</div>
+        <div class="dl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Privacy-first Hive</div>
+        <div class="dl-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Free &amp; Ad-Supported</div>
+      </div>
+      <a class="btn btn-primary btn-lg r d2" style="margin:0 auto;display:inline-flex;" href="mailto:curiovix.support@gmail.com?subject=Melodiq%20Access%20Request">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download APK &bull; Direct Release
+      </a>
+      <div class="dl-note r d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Only download from official Curiovix sources. <a href="../pages/faq.html#install">Safe install guide &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="sec sec-border" id="support" aria-labelledby="supp-h">
+  <div class="wrap">
+    <h2 class="display-sm r d1" id="supp-h" style="margin-bottom:48px;">We&rsquo;re here to help.</h2>
+    <div class="supp-grid r d2">
+      <div class="supp-cell spotlight-host">
+        <div class="supp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h4>Email Support</h4>
+        <p>Contact us at <a href="mailto:curiovix.support@gmail.com">curiovix.support@gmail.com</a> for inquiries, feedback, or assistance.</p>
+      </div>
+      <div class="supp-cell spotlight-host">
+        <div class="supp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 21 2 21"/><line x1="12" y1="10" x2="12" y2="15"/><circle cx="12" cy="18.5" r="0.8" fill="currentColor" stroke="none"/></svg></div>
+        <h4>Bug Reports</h4>
+        <p>Found an issue? Report bugs directly with your device model and Android OS version.</p>
+      </div>
+      <div class="supp-cell spotlight-host">
+        <div class="supp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Privacy &amp; Terms</h4>
+        <p>Review our standalone <a href="../pages/melodiq-privacy.html">Privacy Policy</a> and <a href="../pages/melodiq-terms.html">Terms of Use</a>.</p>
+      </div>
+      <div class="supp-cell spotlight-host">
+        <div class="supp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z"/></svg></div>
+        <h4>Feedback &amp; Suggestions</h4>
+        <p>We actively listen to user feedback to shape future updates and enhancements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="../index.html" aria-label="Curiovix home">
+          <img src="../assets/logo/curiovix-logo.png" alt="Curiovix" height="42" loading="lazy"/>
+        </a>
+        <p>Building useful, privacy-focused software and digital products to make everyday life easier.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Melodiq</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="../pages/melodiq-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Curiovix</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#products">Products</a></li>
+          <li><a href="storysplitz.html">StorySplitz</a></li>
+          <li><a href="mailto:curiovix.support@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="../pages/melodiq-privacy.html">Melodiq Privacy</a></li>
+          <li><a href="../pages/melodiq-terms.html">Melodiq Terms</a></li>
+          <li><a href="../pages/privacy.html">StorySplitz Privacy</a></li>
+          <li><a href="../pages/faq.html#install">Install Guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="year">2026</span> Curiovix. Melodiq is a product by Curiovix.</span>
+      <span><a href="../pages/melodiq-privacy.html">Privacy</a> &middot; <a href="../pages/melodiq-terms.html">Terms</a> &middot; <a href="mailto:curiovix.support@gmail.com">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../config/site.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/scene.js"></script>
+</body>
+</html>
