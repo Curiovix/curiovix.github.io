@@ -11,7 +11,7 @@ const SITE_CONFIG = {
   // Product #1: Melodiq (Flagship Audio Player)
   MELODIQ_NAME:         "Melodiq",
   MELODIQ_TAGLINE:      "Modern Android music player and regional audio discovery companion.",
-  MELODIQ_STATUS:       "Coming Soon on Google Play",
+  MELODIQ_STATUS:       "Coming Soon",
   MELODIQ_VERSION:      "1.0.0",
   MELODIQ_MIN_ANDROID:  "Android 5.0 (API 21)+",
   MELODIQ_TARGET_SDK:   "Target SDK 36",
