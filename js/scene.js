@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 (function () {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
@@ -36,9 +36,18 @@
   });
   const wireMesh = new THREE.Mesh(geometry, wireMat);
 
-  // Point lattice vertices
+  // Point lattice vertices with Platinum (#F1F5F9) & Anodized Ice Mist (#BAE6FD) crest highlights
+  const colors = new Float32Array(vertexCount * 3);
+  for (let i = 0; i < vertexCount; i++) {
+    const mix = (Math.sin(i * 0.37) * 0.5 + 0.5) * 0.42;
+    colors[i * 3]     = 0.945 * (1 - mix) + 0.729 * mix;
+    colors[i * 3 + 1] = 0.961 * (1 - mix) + 0.902 * mix;
+    colors[i * 3 + 2] = 0.976 * (1 - mix) + 0.992 * mix;
+  }
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
   const pointsMat = new THREE.PointsMaterial({
-    color: 0xe2e8f0,
+    vertexColors: true,
     size: isMobile ? 2.0 : 2.4,
     transparent: true,
     opacity: 0.55,
