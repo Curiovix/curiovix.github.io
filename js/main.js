@@ -172,3 +172,33 @@ document.querySelectorAll('.spotlight-host').forEach(el => {
   }
 })();
 
+
+// Tactile magnetic hover for primary buttons (desktop-only)
+(function() {
+  if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function initMagneticButtons() {
+    document.querySelectorAll('.btn-primary, .nav-cta').forEach(function(btn) {
+      btn.addEventListener('mousemove', function(e) {
+        var r = btn.getBoundingClientRect();
+        var x = e.clientX - r.left - r.width / 2;
+        var y = e.clientY - r.top - r.height / 2;
+        var moveX = Math.max(-4, Math.min(4, (x / (r.width / 2)) * 4));
+        var moveY = Math.max(-4, Math.min(4, (y / (r.height / 2)) * 4));
+        btn.style.transform = 'translate(' + moveX.toFixed(1) + 'px, ' + (moveY - 2).toFixed(1) + 'px)';
+        btn.style.transition = 'transform 0.08s ease-out, box-shadow 0.2s';
+      });
+      btn.addEventListener('mouseleave', function() {
+        btn.style.transform = '';
+        btn.style.transition = 'transform 0.45s var(--ease), box-shadow 0.2s, background 0.2s';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMagneticButtons);
+  } else {
+    initMagneticButtons();
+  }
+})();

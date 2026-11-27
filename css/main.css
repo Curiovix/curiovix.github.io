@@ -1,4 +1,4 @@
-﻿/* =============================================================
+/* =============================================================
    Curiovix â€” Design System v2.0
    Premium dark product studio aesthetic
    ============================================================= */
@@ -892,7 +892,7 @@ section,footer,.hero { position:relative; z-index:10; }
   background:linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%) !important;
   color:#09090b !important;
   box-shadow:0 0 35px rgba(226, 232, 240, 0.45), 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 #ffffff !important;
-  transform:translateY(-2px) !important;
+  transform:translateY(-2px);
 }
 .btn-ghost {
   background:rgba(226, 232, 240, 0.045) !important;
@@ -1104,6 +1104,81 @@ body.no-announce .nav { top: 0; }
 /* Section headings adjusted */
 .sec .display, .sec .display-sm { margin-bottom: 18px; }
 
+
+/* ── Matte Anodized Carbon Grain Texture ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9;
+  opacity: 0.028;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── Specular Titanium Border Beam ── */
+.ps-wrap, .prod-visual-card {
+  position: relative;
+}
+.ps-wrap::after, .prod-visual-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 50% 0;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.5s var(--ease);
+}
+.ps-wrap:hover::after, .prod-visual-card:hover::after {
+  opacity: 0.95;
+  animation: specular-shimmer 3.2s ease-in-out infinite;
+}
+@keyframes specular-shimmer {
+  0%, 100% { background-position: 10% 0; }
+  50% { background-position: 90% 0; }
+}
+
+/* ── Live Mini Audio Equalizer Bars ── */
+.eq-bars {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 16px;
+  padding: 0 4px;
+}
+.eq-bars span {
+  display: block;
+  width: 2.5px;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+  border-radius: 1px;
+  height: 4px;
+  animation: eq-pulse 1.2s ease-in-out infinite alternate;
+}
+.eq-bars span:nth-child(1) { height: 6px; animation-delay: 0.1s; animation-duration: 0.85s; }
+.eq-bars span:nth-child(2) { height: 14px; animation-delay: 0.3s; animation-duration: 1.1s; }
+.eq-bars span:nth-child(3) { height: 9px; animation-delay: 0.05s; animation-duration: 0.95s; }
+.eq-bars span:nth-child(4) { height: 12px; animation-delay: 0.25s; animation-duration: 1.05s; }
+
+@keyframes eq-pulse {
+  0% { height: 4px; opacity: 0.5; }
+  50% { height: 14px; opacity: 1; }
+  100% { height: 6px; opacity: 0.7; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .ps-wrap:hover::after, .prod-visual-card:hover::after,
+  .eq-bars span {
+    animation: none;
+  }
+}
 
 /* ============================================================
    MOBILE RESPONSIVENESS BLOCK â€” DO NOT EDIT ABOVE THIS LINE
