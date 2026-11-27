@@ -392,14 +392,14 @@ body{padding-top:calc(var(--ann-h) + var(--nav-h));}
 /* â”€â”€ Product showcase â”€â”€ */
 .ps-wrap{
   background:var(--bg-2);border:1px solid var(--border);
-  border-radius:24px;overflow:hidden;margin-top:56px;
+  border-radius:24px;overflow:hidden;margin-top:40px;
 }
-.ps-grid{display:grid;grid-template-columns:1fr 1.8fr;min-height:500px;}
+.ps-grid{display:grid;grid-template-columns:1.1fr 1fr;min-height:auto;align-items:center;}
 .ps-left{
-  padding:60px 52px;display:flex;flex-direction:column;
+  padding:38px 40px;display:flex;flex-direction:column;
   justify-content:center;border-right:1px solid var(--border);
 }
-.ps-app-row{display:flex;align-items:center;gap:16px;margin-bottom:28px;}
+.ps-app-row{display:flex;align-items:center;gap:16px;margin-bottom:18px;}
 .ps-app-icon{
   width:56px;height:56px;border-radius:15px;object-fit:cover;
   box-shadow:0 8px 32px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07);
@@ -418,17 +418,17 @@ body{padding-top:calc(var(--ann-h) + var(--nav-h));}
   color:var(--dim);background:rgba(255,255,255,.025);border:1px solid var(--border);
   border-radius:100px;padding:3px 10px;
 }
-.ps-desc{font-size:.93rem;color:var(--muted);line-height:1.82;margin-bottom:28px;max-width:380px;}
-.ps-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:36px;}
+.ps-desc{font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:380px;}
+.ps-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:26px;}
 .ps-feat{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted);}
 .ps-feat-dot{width:5px;height:5px;border-radius:50%;background:#cbd5e1;flex-shrink:0;}
 .ps-actions{display:flex;align-items:center;gap:12px;}
 .ps-right{
   position:relative;overflow:hidden;
   background:radial-gradient(ellipse at 60% 40%,rgba(226,232,240,.06) 0%,transparent 65%);
-  display:flex;align-items:center;justify-content:center;padding:48px;
+  display:flex;align-items:center;justify-content:center;padding:28px 32px;
 }
-.ps-visual{display:flex;flex-direction:column;gap:12px;width:100%;position:relative;z-index:1;min-height:480px;justify-content:center;align-items:center;}
+.ps-visual{display:flex;flex-direction:column;gap:12px;width:100%;position:relative;z-index:1;min-height:auto;justify-content:center;align-items:center;}
 .ps-vc{
   background:linear-gradient(180deg,rgba(255,255,255,.045) 0%,rgba(255,255,255,.018) 100%);
   backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
@@ -728,8 +728,8 @@ body.loaded .hero-actions{animation:heroin .9s .22s var(--ease) both;}
   .footer-brand{grid-column:1/-1;}
   .pillars-grid{grid-template-columns:repeat(2,1fr);}
   .ps-grid{grid-template-columns:1fr;}
-  .ps-left{border-right:none;border-bottom:1px solid var(--border);padding:44px 36px;}
-  .ps-right{min-height:280px;}
+  .ps-left{border-right:none;border-bottom:1px solid var(--border);padding:32px 28px;}
+  .ps-right{min-height:auto;padding:24px 28px;}
 }
 @media(max-width:900px){
   .sec{padding:80px 0;}
@@ -1064,7 +1064,9 @@ body.no-announce .nav { top: 0; }
 /* ── Promo Image with 3D Tilt ── */
 .promo-img-wrap {
   position: relative;
-  border-radius: 16px;
+  max-width: 430px;
+  margin: 0 auto;
+  border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.1s ease;
@@ -1128,8 +1130,8 @@ img, video, svg, iframe { max-width: 100%; }
 
   /* Product showcase card â€” stack at tablet */
   .ps-grid { grid-template-columns:1fr; }
-  .ps-left  { border-right:none; border-bottom:1px solid var(--border); padding:36px 24px; }
-  .ps-right { min-height:260px; }
+  .ps-left  { border-right:none; border-bottom:1px solid var(--border); padding:32px 28px; }
+  .ps-right { min-height:auto; padding:24px 28px; }
 
   /* Feature strip */
   .feat-strip  { grid-template-columns:repeat(2,1fr); gap:16px; }
@@ -1209,9 +1211,10 @@ img, video, svg, iframe { max-width: 100%; }
   .prod-visual-card img { width:100%; height:auto; object-fit:contain; }
 
   /* Product showcase card */
-  .ps-wrap    { margin-top:40px; border-radius:16px; }
-  .ps-left    { padding:28px 20px; }
-  .ps-visual  { min-height:220px; }
+  .ps-wrap    { margin-top:24px; border-radius:16px; }
+  .ps-left    { padding:24px 20px; }
+  .ps-right   { padding:20px; }
+  .ps-visual  { min-height:auto; }
   .promo-img  { width:100%; height:auto; display:block; }
 
   /* Feature strip */
