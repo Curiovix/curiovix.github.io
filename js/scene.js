@@ -18,10 +18,10 @@
   const pos   = new Float32Array(COUNT * 3);
   const col   = new Float32Array(COUNT * 3);
   const palette = [
-    [0.13, 0.83, 0.93], // cyan
-    [0.50, 0.51, 0.98], // indigo
-    [0.60, 0.42, 0.98], // violet
-    [0.38, 0.40, 0.95], // periwinkle
+    [0.945, 0.961, 0.976], // #F1F5F9 - Platinum
+    [0.796, 0.835, 0.882], // #CBD5E1 - Titanium Silver
+    [0.580, 0.639, 0.722], // #94A3B8 - Slate Silver
+    [0.392, 0.455, 0.545], // #64748B - Dark Titanium
   ];
   for (let i = 0; i < COUNT; i++) {
     pos[i*3]   = (Math.random()-.5) * 1000;
@@ -33,12 +33,12 @@
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
   geo.setAttribute('color',    new THREE.BufferAttribute(col, 3));
-  const mat = new THREE.PointsMaterial({ size:2.2, vertexColors:true, transparent:true, opacity:.65, sizeAttenuation:true });
+  const mat = new THREE.PointsMaterial({ size:2.2, vertexColors:true, transparent:true, opacity:.55, sizeAttenuation:true });
   const pts = new THREE.Points(geo, mat);
   scene.add(pts);
 
   /* Connection lines */
-  const lineMat = new THREE.LineBasicMaterial({ color: 0x6366f1, transparent: true, opacity: 0.12 });
+  const lineMat = new THREE.LineBasicMaterial({ color: 0x94a3b8, transparent: true, opacity: 0.08 });
   const lineGeo = new THREE.BufferGeometry();
   const linePositions = [];
   const threshold = 120;
