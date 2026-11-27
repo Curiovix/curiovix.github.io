@@ -10,16 +10,17 @@
   const scene  = new THREE.Scene();
   scene.fog    = new THREE.FogExp2(0x070709, 0.0011);
 
-  const camera = new THREE.PerspectiveCamera(52, W / H, 1, 2000);
-  camera.position.set(0, 0, 360);
+  // Portrait mobile camera tuning: wider FOV (65) and increased distance (440) for expansive horizon
+  const camera = new THREE.PerspectiveCamera(isMobile ? 65 : 52, W / H, 1, 2000);
+  camera.position.set(0, 0, isMobile ? 440 : 360);
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
   renderer.setSize(W, H);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 
-  /* 3D Titanium Acoustic Wave Mesh */
-  const segX = isMobile ? 36 : 72;
-  const segY = isMobile ? 22 : 42;
+  /* 3D Titanium Acoustic Wave Mesh — 48x30 on mobile for silky 60fps, 72x42 on desktop */
+  const segX = isMobile ? 48 : 72;
+  const segY = isMobile ? 30 : 42;
   const geometry = new THREE.PlaneGeometry(1600, 900, segX, segY);
 
   const posAttr = geometry.attributes.position;
@@ -27,12 +28,12 @@
   const basePos = new Float32Array(vertexCount * 3);
   basePos.set(posAttr.array);
 
-  // Wireframe lattice in Titanium Silver
+  // Wireframe lattice in Titanium Silver (crisp 0.075 on mobile, 0.065 on desktop)
   const wireMat = new THREE.MeshBasicMaterial({
     color: 0xcbd5e1,
     wireframe: true,
     transparent: true,
-    opacity: 0.065
+    opacity: isMobile ? 0.075 : 0.065
   });
   const wireMesh = new THREE.Mesh(geometry, wireMat);
 
@@ -48,9 +49,9 @@
 
   const pointsMat = new THREE.PointsMaterial({
     vertexColors: true,
-    size: isMobile ? 2.0 : 2.4,
+    size: isMobile ? 2.2 : 2.4,
     transparent: true,
-    opacity: 0.55,
+    opacity: isMobile ? 0.65 : 0.55,
     sizeAttenuation: true
   });
   const points = new THREE.Points(geometry, pointsMat);
@@ -87,7 +88,7 @@
     posAttr.needsUpdate = true;
   }
 
-  /* Resize -- debounced + ignore mobile address-bar height-only changes */
+  /* Resize -- debounced + responsive camera FOV / distance for mobile portrait */
   let resizeTimer, lastW = window.innerWidth;
   window.addEventListener('resize', () => {
     if (window.innerWidth === lastW && window.innerWidth < 768) return;
@@ -96,6 +97,9 @@
     resizeTimer = setTimeout(() => {
       W = window.innerWidth;
       H = window.innerHeight;
+      const mobileNow = W < 768;
+      camera.fov = mobileNow ? 65 : 52;
+      camera.position.z = mobileNow ? 440 : 360;
       camera.aspect = W / H;
       camera.updateProjectionMatrix();
       renderer.setSize(W, H);
@@ -107,7 +111,7 @@
   updateWave(0);
   renderer.render(scene, camera);
 
-  /* Animation loop */
+  /* Animation loop (paused when prefers-reduced-motion is active) */
   if (!isReducedMotion) {
     let t = 0;
     function animate() {
