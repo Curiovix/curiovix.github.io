@@ -6,8 +6,8 @@
 
 /* â”€â”€ Reset â”€â”€ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html, body { background-color: #070709 !important; }
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+html, body { background-color: #070709 !important; color-scheme: dark; }
+html{color-scheme: dark;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 body{background:#070709 !important;color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden;}
 img,video,svg{display:block;max-width:100%;}
 a{text-decoration:none;color:inherit;}
@@ -17,6 +17,7 @@ input,textarea{font-family:inherit;}
 
 /* â”€â”€ Tokens â”€â”€ */
 :root{
+  color-scheme: dark;
   --bg:#070709;
   --bg-2:#0d0d11;
   --bg-3:#131319;
@@ -200,10 +201,12 @@ body{padding-top:calc(var(--ann-h) + var(--nav-h));}
   font-weight:400;line-height:1.08;letter-spacing:-.03em;
   color:var(--text);max-width:720px;margin-bottom:28px;
 }
-.grad-text{
-  background:linear-gradient(135deg, #ffffff 0%, #e2e8f0 48%, #bae6fd 82%, #94a3b8 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;
+.grad-text, .text-grad, .hero-h1 .grad-text {
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 45%, #bae6fd 78%, #cbd5e1 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 .hero-sub{
   font-size:1.05rem;color:var(--muted);max-width:500px;
@@ -844,11 +847,13 @@ section,footer,.hero { position:relative; z-index:10; }
 }
 
 /* ── Brushed metallic Titanium gradient text ── */
-.text-grad, .hero-h1 span.grad-text, .hero-h1 .grad-text {
-  background:linear-gradient(135deg, #ffffff 0%, #e2e8f0 48%, #bae6fd 82%, #94a3b8 100%) !important;
-  -webkit-background-clip:text !important;
-  -webkit-text-fill-color:transparent !important;
-  background-clip:text !important;
+/* ── Brushed metallic Titanium gradient text ── */
+.grad-text, .text-grad, .hero-h1 span.grad-text, .hero-h1 .grad-text {
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 45%, #bae6fd 78%, #cbd5e1 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 
 /* ── Elevated Brushed Graphite surfaces with specular edge ── */
