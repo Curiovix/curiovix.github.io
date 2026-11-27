@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://curiovix.com/sitemap.xml
+Sitemap: https://curiovix.github.io/sitemap.xml

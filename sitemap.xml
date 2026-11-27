@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://curiovix.com/</loc>
+    <loc>https://curiovix.github.io/</loc>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/products/melodiq.html</loc>
+    <loc>https://curiovix.github.io/products/melodiq.html</loc>
     <priority>0.95</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/pages/melodiq-privacy.html</loc>
+    <loc>https://curiovix.github.io/pages/melodiq-privacy.html</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/pages/melodiq-terms.html</loc>
+    <loc>https://curiovix.github.io/pages/melodiq-terms.html</loc>
     <priority>0.75</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/products/storysplitz.html</loc>
+    <loc>https://curiovix.github.io/products/storysplitz.html</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/pages/faq.html</loc>
+    <loc>https://curiovix.github.io/pages/faq.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/pages/privacy.html</loc>
+    <loc>https://curiovix.github.io/pages/privacy.html</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://curiovix.com/pages/terms.html</loc>
+    <loc>https://curiovix.github.io/pages/terms.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
   </url>

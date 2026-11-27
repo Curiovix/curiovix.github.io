@@ -6,7 +6,7 @@ const SITE_CONFIG = {
   COMPANY_NAME:         "Curiovix",
   COMPANY_TAGLINE:      "Building useful software and digital products to make everyday life easier.",
   SUPPORT_EMAIL:        "curiovix.support@gmail.com",
-  SITE_URL:             "https://curiovix.com",
+  SITE_URL:             "https://curiovix.github.io",
 
   // Product #1: Melodiq (Flagship Audio Player)
   MELODIQ_NAME:         "Melodiq",
